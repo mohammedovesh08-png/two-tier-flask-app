@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Two-Tier Flask App | DevOps Project</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #0f172a;
+            color: #e2e8f0;
+            line-height: 1.6;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #0f172a, #1e40af);
+            text-align: center;
+            padding: 70px 20px;
+        }
+
+        .hero h1 {
+            font-size: 44px;
+            margin-bottom: 15px;
+        }
+
+        .hero h1 span {
+            color: #60a5fa;
+        }
+
+        .hero p {
+            max-width: 850px;
+            margin: auto;
+            font-size: 18px;
+            color: #cbd5e1;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 50px 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 30px;
+            margin-bottom: 30px;
+        }
+
+        .description {
+            background: #1e293b;
+            border: 1px solid #334155;
+            padding: 30px;
+            border-radius: 14px;
+            margin-bottom: 50px;
+            text-align: center;
+        }
+
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 14px;
+            padding: 25px;
+            text-align: center;
+            transition: transform 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            color: #60a5fa;
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+
+        .pipeline {
+            background: #111827;
+            border: 1px solid #334155;
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            font-size: 19px;
+            margin-bottom: 55px;
+        }
+
+        .pipeline span {
+            color: #60a5fa;
+            font-weight: bold;
+            margin: 0 6px;
+        }
+
+        .architecture {
+            background: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 15px;
+            padding: 35px;
+            text-align: center;
+            margin-bottom: 55px;
+        }
+
+        .architecture-box {
+            display: inline-block;
+            background: #0f172a;
+            border: 1px solid #475569;
+            border-radius: 10px;
+            padding: 18px 25px;
+            margin: 10px;
+            min-width: 180px;
+        }
+
+        .architecture-box h3 {
+            color: #60a5fa;
+        }
+
+        .arrow {
+            color: #60a5fa;
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        .output {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .output img {
+            width: 100%;
+            max-width: 1000px;
+            border-radius: 14px;
+            border: 2px solid #334155;
+            margin-top: 20px;
+        }
+
+        .buttons {
+            text-align: center;
+            margin: 50px 0 20px;
+        }
+
+        .buttons a {
+            display: inline-block;
+            background: #2563eb;
+            color: white;
+            text-decoration: none;
+            padding: 13px 25px;
+            margin: 8px;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+
+        .buttons a:hover {
+            background: #1d4ed8;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            background: #020617;
+            color: #94a3b8;
+        }
+
+        @media (max-width: 600px) {
+
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .pipeline {
+                font-size: 15px;
+            }
+
+            .arrow {
+                display: block;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HERO -->
+    <section class="hero">
+
+        <h1>Two-Tier <span>Flask App</span> 🚀</h1>
+
+        <p>
+            Containerized Two-Tier Web Application using Flask,
+            Docker Compose and Database with DevOps practices.
+        </p>
+
+    </section>
+
+
+    <div class="container">
+
+        <!-- DESCRIPTION -->
+        <div class="description">
+
+            <h2 class="section-title">
+                🐍 Two-Tier Flask Application
+            </h2>
+
+            <p>
+                This project demonstrates a two-tier web application
+                built with Python Flask and a database layer.
+                The application is containerized using Docker and
+                managed using Docker Compose.
+            </p>
+
+        </div>
+
+
+        <!-- ARCHITECTURE -->
+        <h2 class="section-title">
+            🏗️ Application Architecture
+        </h2>
+
+        <div class="architecture">
+
+            <div class="architecture-box">
+                <h3>🌐 Web Tier</h3>
+                <p>Flask Application</p>
+            </div>
+
+            <div class="arrow">→</div>
+
+            <div class="architecture-box">
+                <h3>🗄️ Database Tier</h3>
+                <p>Database Service</p>
+            </div>
+
+        </div>
+
+
+        <!-- DOCKER -->
+        <h2 class="section-title">
+            🐳 Docker Architecture
+        </h2>
+
+        <div class="pipeline">
+
+            Docker Compose
+            <span>→</span>
+            Flask Container
+            <span>→</span>
+            Database Container
+
+        </div>
+
+
+        <!-- TECHNOLOGIES -->
+        <h2 class="section-title">
+            🛠️ Technologies Used
+        </h2>
+
+        <div class="card-grid">
+
+            <div class="card">
+                <h3>🐍 Python</h3>
+                <p>Application development using Python.</p>
+            </div>
+
+            <div class="card">
+                <h3>🌐 Flask</h3>
+                <p>Lightweight Python web framework.</p>
+            </div>
+
+            <div class="card">
+                <h3>🐳 Docker</h3>
+                <p>Application containerization.</p>
+            </div>
+
+            <div class="card">
+                <h3>🔗 Docker Compose</h3>
+                <p>Multi-container application management.</p>
+            </div>
+
+            <div class="card">
+                <h3>🗄️ Database</h3>
+                <p>Database layer for application data.</p>
+            </div>
+
+            <div class="card">
+                <h3>☸️ Kubernetes</h3>
+                <p>Kubernetes manifests are included in the project.</p>
+            </div>
+
+            <div class="card">
+                <h3>☁️ AWS EKS</h3>
+                <p>EKS deployment manifests are included in the repository.</p>
+            </div>
+
+            <div class="card">
+                <h3>⚙️ Jenkins</h3>
+                <p>Jenkins pipeline configuration is included.</p>
+            </div>
+
+        </div>
+
+
+        <!-- PROJECT FILES -->
+        <h2 class="section-title" style="margin-top:60px;">
+            📁 Project Components
+        </h2>
+
+        <div class="card-grid">
+
+            <div class="card">
+                <h3>app.py</h3>
+                <p>Flask application source code.</p>
+            </div>
+
+            <div class="card">
+                <h3>Dockerfile</h3>
+                <p>Docker image configuration.</p>
+            </div>
+
+            <div class="card">
+                <h3>docker-compose.yml</h3>
+                <p>Multi-container configuration.</p>
+            </div>
+
+            <div class="card">
+                <h3>k8s</h3>
+                <p>Kubernetes deployment manifests.</p>
+            </div>
+
+        </div>
+
+
+        <!-- PIPELINE -->
+        <h2 class="section-title" style="margin-top:60px;">
+            🔄 DevOps Flow
+        </h2>
+
+        <div class="pipeline">
+
+            GitHub
+            <span>→</span>
+            Jenkins
+            <span>→</span>
+            Docker Build
+            <span>→</span>
+            Docker Compose
+            <span>→</span>
+            Kubernetes
+
+        </div>
+
+
+        <!-- PROJECT OUTPUT -->
+        <div class="output">
+
+            <h2 class="section-title">
+                📊 Project Output
+            </h2>
+
+            <p>
+                Two-Tier Flask Application project repository and
+                DevOps configuration.
+            </p>
+
+        </div>
+
+
+        <!-- LINKS -->
+        <div class="buttons">
+
+            <a href="https://github.com/mohammedovesh08-png/two-tier-flask-app"
+               target="_blank">
+                GitHub Repository
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <p>
+            Created by Ovesh Mohammad | DevOps & Cloud Project
+        </p>
+
+    </footer>
+
+</body>
+</html>
